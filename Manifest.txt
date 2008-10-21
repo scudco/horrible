@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/horrible
+lib/horrible.rb
+test/test_horrible.rb
