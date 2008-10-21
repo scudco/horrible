@@ -19,9 +19,9 @@ end
 module Spec::Example::ExampleGroupMethods
   def you(description,&block)
     if ENV['MANUAL']
-      it("#{description}",&block)
+      it(description,&block)
     else
-      it("#{description}") do
+      it(description) do
         pending("This needs to be executed MANUALLY")
       end
     end
