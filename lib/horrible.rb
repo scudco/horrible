@@ -18,7 +18,7 @@ end
  
 module Spec::Example::ExampleGroupMethods
   def you(description,&block)
-    if ENV['MANUAL']
+    if ENV['manual']
       it(description,&block)
     else
       it(description) do

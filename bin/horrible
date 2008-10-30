@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+ENV['manual'] = 'true'
+require ARGV.shift until ARGV.empty?
