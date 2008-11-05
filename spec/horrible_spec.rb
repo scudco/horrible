@@ -20,6 +20,5 @@ describe "Bar" do
   you "should verify this other thing" do
     step "\nThis other thing is important, alright?"
     step("what does the important thing say?").should == "thing"
-    step("<sarcasm>I wish I could integrate screenshots into this somehow so I could show you how to use an application because, let's be honest you are entirely too retarded to understand how to use an application without seeing lots of malformed and outdated screenshots.</sarcasm>").should == "orly"
   end
 end

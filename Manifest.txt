@@ -4,4 +4,5 @@ README.txt
 Rakefile
 bin/horrible
 lib/horrible.rb
-test/test_horrible.rb
+spec/horrible_spec.rb
+spec/spec_helper.rb
