@@ -7,6 +7,27 @@
 
 	<title>scudco/horrible @ GitHub</title>
 	
+  <!-- Vim Syntax CSS -->
+  <style type="text/css">
+    <!--
+    .Identifier { color: #ffffff; }
+    .Special { color: #fb8000; }
+    .rubyInterpolation { color: #ffffff; }
+    .Include { color: #ffcc00; }
+    .rubyStringDelimiter { color: #66ff00; }
+    .String { color: #66ff00; }
+    .Type { color: #ffffff; }
+    .Statement { color: #ff6600; }
+    .lnr { color: #bfbfbf; }
+    .Function { color: #ffcc00; }
+    .rubyStringDelimiter { color: #66ff00; }
+    .Comment { color: #9933cc; }
+    .rubySymbol { color: #339999; }
+    .Define { color: #ff6600; }
+    pre { font-family: monospace; color: #ffffff; background-color: #000000; }
+    -->
+  </style>
+
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
@@ -51,11 +72,53 @@
     <div class="description">
       Horrible helps you integrate manual and automated specs/tests
     </div>
+    <h2>Description</h2>
+    <p>Horrible helps you integrate specifications(or tests) which need to be verified manually into your automated specs/tests.</p>
+
+    <h2>Features</h2>
+<ul>
+  <li>Manual specs with descriptions and steps</li>
+  <li>Steps are presented as a prompt</li>
+  <li>Steps can contain blocks of code to be executed in context of the spec</li>
+</ul>
+
+
+
+<pre>
+<span class="lnr"> 1 </span><span class="Include">require</span> <span class="rubyStringDelimiter">'</span><span class="String">rubygems</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 2 </span><span class="Include">require</span> <span class="rubyStringDelimiter">'</span><span class="String">horrible</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span>describe <span class="rubyStringDelimiter">&quot;</span><span class="String">A horrible spec</span><span class="rubyStringDelimiter">&quot;</span> <span class="Statement">do</span>
+<span class="lnr"> 5 </span>
+<span class="lnr"> 6 </span>  before <span class="rubySymbol">:all</span> <span class="Statement">do</span>
+<span class="lnr"> 7 </span>    <span class="Identifier">@hokeypokey</span> = <span class="Constant">false</span>
+<span class="lnr"> 8 </span>  <span class="Statement">end</span>
+<span class="lnr"> 9 </span>
+<span class="lnr">10 </span>  it <span class="rubyStringDelimiter">&quot;</span><span class="String">should be true</span><span class="rubyStringDelimiter">&quot;</span> <span class="Statement">do</span>
+<span class="lnr">11 </span>    <span class="Constant">true</span>.should be_true
+<span class="lnr">12 </span>  <span class="Statement">end</span>
+<span class="lnr">13 </span>
+<span class="lnr">14 </span>  you <span class="rubyStringDelimiter">&quot;</span><span class="String">should verify that the sky is blue</span><span class="rubyStringDelimiter">&quot;</span> <span class="Statement">do</span>
+<span class="lnr">15 </span>    step(<span class="rubyStringDelimiter">&quot;</span><span class="String">What color is the sky?</span><span class="rubyStringDelimiter">&quot;</span>).should == <span class="rubyStringDelimiter">&quot;</span><span class="String">blue</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">16 </span>    step <span class="rubyStringDelimiter">&quot;</span><span class="String">Now do the hokey-pokey</span><span class="rubyStringDelimiter">&quot;</span> <span class="Statement">do</span>
+<span class="lnr">17 </span>      <span class="Identifier">@hokeypokey</span> = <span class="Constant">true</span>
+<span class="lnr">18 </span>    <span class="Statement">end</span>
+<span class="lnr">19 </span>    <span class="Identifier">@hokeypokey</span>.should be_true
+<span class="lnr">20 </span>  <span class="Statement">end</span>
+<span class="lnr">21 </span>
+<span class="lnr">22 </span><span class="Statement">end</span>
+</pre>
+
+    <h2>Install</h2>
+    <p>sudo gem install horrible</p>
+
+    <h2>License</h2>
+    <p>The CiaFoYI(Copyright-is-a-Figment-of-Your-Imagination) License</p>
 
     <h2>Authors</h2>
-<p>Adam Anderson (adamandersonis@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Adam Anderson (adamandersonis@gmail.com)<br/>      </p>
+    <p>Adam Anderson (adamandersonis@gmail.com)<br/><br/>      </p>
+    <h2>Contact</h2>
+    <p>Adam Anderson (adamandersonis@gmail.com)<br/>      </p>
 
 
     <h2>Download</h2>
